@@ -1,15 +1,16 @@
 //
-//  GameScene.swift
+//  PlayGame.swift
 //  Joust
 //
 //  Created by Abhishek Bansal on 2019-06-22.
 //  Copyright © 2019 Abhishek Bansal. All rights reserved.
-//  Check Commit
+//
+
 
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class PlayGameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
@@ -63,9 +64,9 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let PlayGameScene = GameScene(fileNamed: "PlayGameScene")
-        PlayGameScene?.scaleMode = .aspectFill
-        self.view?.presentScene(PlayGameScene!, transition: SKTransition.fade(withDuration: 1.0))
+        let gameScene = GameScene(fileNamed: "StartScene")
+        gameScene?.scaleMode = .aspectFill
+        self.view?.presentScene(gameScene!, transition: SKTransition.fade(withDuration: 1.0))
         
     }
     
